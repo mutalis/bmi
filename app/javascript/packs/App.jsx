@@ -4,23 +4,30 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import Bmi from './Bmi';
 
-const Hello = props => (
-  <div>Hello {props.name}!</div>
-)
+class App extends React.Component {
 
-Hello.defaultProps = {
-  name: 'David'
-}
+  inputValidator = (value) => {
+    if (value.length < 1) {
+      return 'Enter a value for '
+    }
+    if (isNaN(value)) {
+      return 'Only numbers are allowed for '
+    }
+    return null
+  }
 
-Hello.propTypes = {
-  name: PropTypes.string
+  render() {
+    return (
+      <Bmi getErrorMessage={this.inputValidator} />
+    )
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Hello name="React" />,
+    <App />,
     document.getElementById('bmi')
   )
 })
