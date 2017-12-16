@@ -3,13 +3,13 @@
 ## Description
 Create a web application to calculate the body mass index given the mass and height of the user. The application must indicate the category accordingly to the [standard](http://en.wikipedia.org/wiki/Body_mass_index#Categories). You should register as a user in order to use the application and calculate your body mass index.
 
-##Backend: Ruby on Rails
+## Backend: Ruby on Rails
 This application requires:
 
 * Ruby 2.4.2
 * Rails 5.0.6
 
-##Frontend: React
+## Frontend: React
 This application requires:
 
 * Node 8.x
